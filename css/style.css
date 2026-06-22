@@ -48,6 +48,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -57,6 +58,8 @@ body {
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 15px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* ========================================
@@ -67,6 +70,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .main {
@@ -340,8 +344,9 @@ body {
 
 .results-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
   gap: var(--space-lg);
+  min-width: 0;
 }
 
 .result-card {
@@ -350,6 +355,7 @@ body {
   border-radius: var(--radius);
   background: var(--color-bg-alt);
   transition: var(--transition);
+  min-width: 0;
 }
 
 .result-card:hover {
@@ -388,30 +394,38 @@ body {
   letter-spacing: -0.5px;
   color: var(--color-primary);
   margin: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .result-body {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  min-width: 0;
 }
 
 .result-row {
   display: flex;
   gap: var(--space-lg);
   font-size: 14px;
+  min-width: 0;
 }
 
 .result-label {
   color: var(--color-text-tertiary);
   font-weight: 600;
   min-width: 70px;
+  flex-shrink: 0;
 }
 
 .result-value {
   color: var(--color-text);
   font-weight: 500;
   flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .result-list {
@@ -425,6 +439,8 @@ body {
   font-size: 13px;
   color: var(--color-text-secondary);
   border-bottom: 1px solid var(--color-border);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .result-list li:last-child {
