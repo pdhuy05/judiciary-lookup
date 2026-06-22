@@ -1,0 +1,36 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E3A66"/>
+      <stop offset="100%" stop-color="#0F1F38"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="108" fill="url(#bg)"/>
+
+  <!-- Cán cân -->
+  <g stroke="#E9C46A" stroke-width="11" stroke-linecap="round" fill="none">
+    <!-- Trụ đứng -->
+    <line x1="256" y1="140" x2="256" y2="372"/>
+    <!-- Tay ngang -->
+    <line x1="146" y1="186" x2="366" y2="186"/>
+    <!-- Dây trái -->
+    <line x1="146" y1="186" x2="112" y2="262"/>
+    <line x1="146" y1="186" x2="180" y2="262"/>
+    <!-- Dây phải -->
+    <line x1="366" y1="186" x2="332" y2="262"/>
+    <line x1="366" y1="186" x2="400" y2="262"/>
+  </g>
+
+  <!-- Đĩa cân trái -->
+  <path d="M104 262 Q146 312 188 262" stroke="#E9C46A" stroke-width="11" stroke-linecap="round" fill="none"/>
+  <!-- Đĩa cân phải -->
+  <path d="M324 262 Q366 312 408 262" stroke="#E9C46A" stroke-width="11" stroke-linecap="round" fill="none"/>
+
+  <!-- Đỉnh trụ -->
+  <circle cx="256" cy="140" r="14" fill="#E9C46A"/>
+
+  <!-- Chân đế -->
+  <path d="M198 372 L314 372 L334 404 L178 404 Z" fill="#E9C46A"/>
+  <rect x="170" y="404" width="172" height="20" rx="8" fill="#E9C46A"/>
+</svg>

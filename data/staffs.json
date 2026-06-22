@@ -1,0 +1,412 @@
+[
+  {
+    "id": 1,
+    "name": "Phan Sỹ Hùng",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Đoàn Mạnh Đức",
+        "room": "203"
+      },
+      {
+        "name": "Đỗ Minh Phước",
+        "room": ""
+      },
+      {
+        "name": "Nguyễn Thị Thanh K. Tuyền",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Tôn Trung Tuấn",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Nguyễn Sơn Hà",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Phạm Thị Tâm",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Nguyễn Kim Oanh",
+        "room": ""
+      },
+      {
+        "name": "Nguyễn Sơn Hà",
+        "room": ""
+      },
+      {
+        "name": "Lê Phan Duy Thịnh",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Phan Văn Cảnh",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Phạm Thị Phương Thảo",
+        "room": ""
+      },
+      {
+        "name": "Nguyễn Sơn Hà",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Lê Thị Lan",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Phạm Thị Phương Thảo",
+        "room": ""
+      },
+      {
+        "name": "Nguyễn Thị Thảo Sương",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Trần Minh Anh",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Nguyễn Thị Kim Oanh",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Lê Thị Phương",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Bùi Ngọc Khánh Hoàng",
+        "room": ""
+      },
+      {
+        "name": "Bế Thị Phượng",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Đỗ Thế Đông",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Bế Thị Phượng",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Đặng Diệu Linh",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Nguyễn Sơn Hà",
+        "room": ""
+      },
+      {
+        "name": "Cao Thị Mỹ Trà",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Hoàng Thị Ánh",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Nguyễn Thị Thanh Kim Tuyền",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Bùi Thị Mai",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Cao Thị Mỹ Trà",
+        "room": ""
+      },
+      {
+        "name": "Bế Thị Phượng",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Nguyễn Hồng Hạnh",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Phạm Thị Nguyên",
+        "room": ""
+      },
+      {
+        "name": "Bế Thị Phượng",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Nguyễn Quang Huynh",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Đoàn Mạnh Đức",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Trần Thị Quế Hương",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Đoàn Mạnh Đức",
+        "room": ""
+      },
+      {
+        "name": "Nguyễn Thị Kim Oanh",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Huỳnh Ngọc Tuấn",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Lê Phan Duy Thịnh",
+        "room": ""
+      },
+      {
+        "name": "Nguyễn Thị Thanh K. Tuyền",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Đỗ Nguyễn Mai Phương",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Bế Thị Phượng",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Nguyễn Minh Hoàng Vương",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Lê Phan Duy Thịnh",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Nguyễn Nhật Minh",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Bế Thị Phượng",
+        "room": ""
+      },
+      {
+        "name": "Nguyễn Sơn Hà",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Nguyễn Thị Phượng",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Phạm Thị Nguyên",
+        "room": ""
+      },
+      {
+        "name": "Hoàng Hải Đăng",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Nguyễn Đức Tĩnh",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Bùi Ngọc Khánh Hoàng",
+        "room": ""
+      },
+      {
+        "name": "Bế Thị Phượng",
+        "room": ""
+      },
+      {
+        "name": "Hoàng Hải Đăng",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Phạm Thị Thu Hiền",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Nguyễn Thị Thanh K. Tuyền",
+        "room": ""
+      },
+      {
+        "name": "Cao Thị Mỹ Trà",
+        "room": ""
+      },
+      {
+        "name": "Phạm Thị Phương Thảo",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Phan Thị Thanh Nhàn",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Nguyễn Thị Thanh K. Tuyền",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Đinh Kim Huệ",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Bùi Ngọc Khánh Hoàng",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Ngô Thị Phúc Hảo",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Phạm Thế Vinh",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Nguyễn Thúy Minh",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Phạm Thế Vinh",
+        "room": ""
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Nguyễn Văn Mạnh",
+    "role": "Thẩm phán",
+    "department": "",
+    "room": "",
+    "clerks": [
+      {
+        "name": "Cao Thị Mỹ Trà",
+        "room": ""
+      }
+    ]
+  }
+]
