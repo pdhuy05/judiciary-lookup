@@ -160,6 +160,7 @@ body {
 
 .search-wrapper {
   max-width: 500px;
+  width: 100%;
 }
 
 .search-box {
@@ -171,6 +172,7 @@ body {
   border-radius: var(--radius);
   background: var(--color-bg-alt);
   transition: var(--transition);
+  min-width: 0;
 }
 
 .search-box:focus-within {
@@ -191,11 +193,12 @@ body {
 
 .search-input {
   flex: 1;
+  min-width: 0;
   border: none;
   background: transparent;
   color: var(--color-text);
   font-family: inherit;
-  font-size: 15px;
+  font-size: 16px;
   outline: none;
 }
 
