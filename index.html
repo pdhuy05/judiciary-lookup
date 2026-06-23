@@ -79,18 +79,72 @@
                     <stop offset="0%" stop-color="#34d399"/>
                     <stop offset="100%" stop-color="#047857"/>
                   </linearGradient>
+                  <linearGradient id="fishGradC" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f472b6"/>
+                    <stop offset="100%" stop-color="#be185d"/>
+                  </linearGradient>
+                  <linearGradient id="fishGradD" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fbbf24"/>
+                    <stop offset="100%" stop-color="#ea580c"/>
+                  </linearGradient>
+                  <linearGradient id="fishGradE" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#a78bfa"/>
+                    <stop offset="100%" stop-color="#6d28d9"/>
+                  </linearGradient>
+                  <linearGradient id="fishGradF" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#22d3ee"/>
+                    <stop offset="100%" stop-color="#2563eb"/>
+                  </linearGradient>
                 </defs>
 
                 <!-- Bubble animations container -->
                 <g class="bubbles-container"></g>
+
+                <!-- Seabed decor -->
+                <g class="reef reef-left">
+                  <path d="M 0 190 Q 18 176 34 184 T 62 186 L 62 200 L 0 200 Z" class="sandbank"/>
+                  <path d="M 18 184 C 14 174 16 164 20 156 C 25 163 25 174 23 184" class="seaweed seaweed-a"/>
+                  <path d="M 28 185 C 24 171 26 158 32 148 C 36 158 35 172 34 185" class="seaweed seaweed-b"/>
+                  <path d="M 38 186 C 35 176 36 166 41 157 C 45 165 45 176 44 186" class="seaweed seaweed-c"/>
+                  <path d="M 10 188 C 15 179 16 170 14 162 C 22 165 26 176 24 188" class="coral coral-pink"/>
+                  <path d="M 46 188 C 43 178 47 168 54 162 C 58 169 58 180 54 188" class="coral coral-orange"/>
+                  <circle cx="7" cy="188" r="2.3" class="reef-stone"/>
+                  <circle cx="56" cy="190" r="1.8" class="reef-stone reef-stone-soft"/>
+                </g>
+
+                <g class="reef reef-right">
+                  <path d="M 138 188 Q 156 176 171 184 T 200 186 L 200 200 L 138 200 Z" class="sandbank"/>
+                  <path d="M 154 186 C 150 174 151 162 157 152 C 163 162 161 175 159 186" class="seaweed seaweed-a"/>
+                  <path d="M 166 188 C 162 176 164 164 170 153 C 175 164 173 177 171 188" class="seaweed seaweed-b"/>
+                  <path d="M 179 188 C 176 178 177 168 182 159 C 187 168 186 178 185 188" class="seaweed seaweed-c"/>
+                  <path d="M 145 189 C 149 178 149 168 146 160 C 155 163 159 176 157 189" class="coral coral-violet"/>
+                  <path d="M 188 189 C 183 179 184 170 189 162 C 196 168 197 180 193 189" class="coral coral-cyan"/>
+                  <circle cx="141" cy="191" r="2.1" class="reef-stone"/>
+                  <circle cx="194" cy="188" r="1.7" class="reef-stone reef-stone-soft"/>
+                </g>
+
+                <g class="kelp-forest">
+                  <path d="M 74 198 C 72 184 74 170 80 154 C 86 168 84 183 82 198" class="kelp kelp-tall"/>
+                  <path d="M 88 198 C 86 187 87 178 91 169 C 96 177 96 188 94 198" class="kelp kelp-mid"/>
+                  <path d="M 101 198 C 99 186 101 172 106 160 C 111 171 110 186 108 198" class="kelp kelp-tall kelp-delay"/>
+                  <path d="M 116 198 C 114 189 115 180 119 172 C 124 180 124 189 122 198" class="kelp kelp-short"/>
+                  <path d="M 126 198 C 124 186 126 174 131 164 C 137 176 135 188 133 198" class="kelp kelp-mid kelp-delay-2"/>
+                </g>
 
                 <!-- Fish 1 -->
                 <g class="creature fish-1">
                   <g class="creature-inner">
                     <path d="M -20 -6 Q -26 -10 -28 0 Q -26 10 -20 6 Z" class="fish-tail"/>
                     <path d="M -20 0 Q -14 -11 0 -10 Q 14 -9 18 0 Q 14 9 0 10 Q -14 11 -20 0 Z" class="fish-body"/>
+                    <path d="M -9 -2 Q -1 -8 11 -6" class="fish-shine"/>
+                    <path d="M -10 2 Q 0 7 10 4" class="fish-pattern fish-pattern-soft"/>
+                    <path d="M -7 -8 Q -2 -14 5 -10" class="fish-fin-top"/>
+                    <path d="M -5 8 Q 0 12 6 8" class="fish-fin-bottom"/>
+                    <path d="M -9 -5 Q -11 0 -8 5" class="fish-gill"/>
                     <path d="M -6 -8 Q 0 -13 6 -9" class="fish-fin"/>
-                    <circle cx="9" cy="-2" r="2.2" class="fish-eye"/>
+                    <circle cx="9" cy="-2" r="2.4" class="fish-eye"/>
+                    <circle cx="9.8" cy="-2" r="1.15" class="fish-pupil"/>
+                    <circle cx="10.6" cy="-2.7" r="0.45" class="fish-eye-spark"/>
                   </g>
                 </g>
 
@@ -99,61 +153,79 @@
                   <g class="creature-inner">
                     <path d="M -18 -5 Q -23 -9 -25 0 Q -23 9 -18 5 Z" class="fish3-tail"/>
                     <path d="M -18 0 Q -12 -10 2 -9 Q 13 -8 16 0 Q 13 8 2 9 Q -12 10 -18 0 Z" class="fish3-body"/>
-                    <circle cx="8" cy="-2" r="2" class="fish3-eye"/>
+                    <path d="M -8 -2 Q 0 -7 9 -4" class="fish-shine fish-shine-cool"/>
+                    <path d="M -7 2 Q 0 6 8 2" class="fish-pattern fish-pattern-cool"/>
+                    <path d="M -5 -7 Q 1 -12 7 -7" class="fish3-fin fish-fin-top"/>
+                    <path d="M -8 -4 Q -10 0 -7 4" class="fish-gill fish-gill-cool"/>
+                    <circle cx="8" cy="-2" r="2.1" class="fish3-eye"/>
+                    <circle cx="8.8" cy="-2" r="1" class="fish-pupil"/>
+                    <circle cx="9.5" cy="-2.6" r="0.4" class="fish-eye-spark"/>
                   </g>
                 </g>
 
-                <!-- Octopus -->
-                <g class="creature octopus">
+                <!-- Fish 3 -->
+                <g class="creature fish-3">
                   <g class="creature-inner">
-                    <g class="octopus-tentacles">
-                      <path d="M -7 4 Q -11 14 -8 24" class="octopus-tentacle"/>
-                      <path d="M -3 7 Q -4 17 -2 26" class="octopus-tentacle"/>
-                      <path d="M 3 7 Q 4 17 2 26" class="octopus-tentacle"/>
-                      <path d="M 7 4 Q 11 14 8 24" class="octopus-tentacle"/>
-                    </g>
-                    <circle cx="0" cy="-2" r="11" class="octopus-head"/>
-                    <circle cx="-4" cy="-4" r="1.6" class="octopus-eye"/>
-                    <circle cx="4" cy="-4" r="1.6" class="octopus-eye"/>
+                    <path d="M -16 -5 Q -23 -10 -27 0 Q -23 10 -16 5 Z" class="fish4-tail"/>
+                    <path d="M -16 0 Q -10 -12 2 -11 Q 14 -10 20 0 Q 14 10 2 11 Q -10 12 -16 0 Z" class="fish4-body"/>
+                    <path d="M -8 -3 Q 0 -10 12 -6" class="fish-shine fish-shine-pink"/>
+                    <path d="M -8 4 Q 1 8 11 4" class="fish-pattern fish-pattern-pink"/>
+                    <path d="M -2 -10 Q 6 -16 11 -8" class="fish4-fin"/>
+                    <path d="M -1 10 Q 6 16 11 8" class="fish4-fin fish4-fin-lower"/>
+                    <path d="M -7 -5 Q -9 0 -7 5" class="fish-gill fish-gill-pink"/>
+                    <circle cx="10" cy="-2" r="2.2" class="fish4-eye"/>
+                    <circle cx="10.9" cy="-2" r="1" class="fish-pupil"/>
+                    <circle cx="11.7" cy="-2.7" r="0.4" class="fish-eye-spark"/>
                   </g>
                 </g>
 
-                <!-- Jellyfish -->
-                <g class="creature jellyfish">
+                <!-- Fish 4 -->
+                <g class="creature fish-4">
                   <g class="creature-inner">
-                    <path d="M -9 -2 Q -9 -12 0 -12 Q 9 -12 9 -2 Q 5 2 0 0 Q -5 2 -9 -2 Z" class="jellyfish-head"/>
-                    <g class="jellyfish-tentacles">
-                      <path d="M -5 0 Q -9 8 -6 18" class="jellyfish-tentacle"/>
-                      <path d="M 0 1 Q -1 10 1 20" class="jellyfish-tentacle"/>
-                      <path d="M 5 0 Q 9 8 6 18" class="jellyfish-tentacle"/>
-                    </g>
+                    <path d="M -14 -4 Q -20 -8 -23 0 Q -20 8 -14 4 Z" class="fish5-tail"/>
+                    <path d="M -14 0 Q -8 -9 0 -10 Q 12 -9 16 0 Q 12 9 0 10 Q -8 9 -14 0 Z" class="fish5-body"/>
+                    <path d="M -7 -2 Q 0 -8 9 -5" class="fish-shine fish-shine-warm"/>
+                    <path d="M -3 -8 Q 4 -13 8 -7" class="fish5-fin"/>
+                    <path d="M -6 -4 Q -8 0 -6 4" class="fish-gill fish-gill-warm"/>
+                    <circle cx="8" cy="-2" r="2" class="fish5-eye"/>
+                    <circle cx="8.8" cy="-2" r="0.92" class="fish-pupil"/>
+                    <circle cx="9.4" cy="-2.5" r="0.35" class="fish-eye-spark"/>
+                    <path d="M -5 0 Q 0 3 7 1" class="fish5-stripe"/>
+                    <path d="M -4 -4 Q 1 -1 7 -3" class="fish5-stripe"/>
                   </g>
                 </g>
 
-                <!-- Starfish -->
-                <g class="creature starfish">
+                <!-- Fish 5 -->
+                <g class="creature fish-5">
                   <g class="creature-inner">
-                    <path d="M 0 -9 L 4 -3 L 10 -2 L 5 3 L 7 10 L 0 6 L -7 10 L -5 3 L -10 -2 L -4 -3 Z" class="starfish-arms"/>
-                    <circle cx="0" cy="0" r="3" class="starfish-body"/>
+                    <path d="M -18 -6 Q -25 -11 -29 0 Q -25 11 -18 6 Z" class="fish6-tail"/>
+                    <path d="M -18 0 Q -12 -13 2 -12 Q 17 -11 23 0 Q 17 11 2 12 Q -12 13 -18 0 Z" class="fish6-body"/>
+                    <path d="M -8 -4 Q 1 -11 14 -7" class="fish-shine fish-shine-violet"/>
+                    <path d="M -2 -11 Q 7 -18 13 -9" class="fish6-fin"/>
+                    <path d="M -8 -5 Q -10 0 -8 5" class="fish-gill fish-gill-violet"/>
+                    <circle cx="11" cy="-2" r="2.2" class="fish6-eye"/>
+                    <circle cx="11.9" cy="-2" r="1.02" class="fish-pupil"/>
+                    <circle cx="12.7" cy="-2.7" r="0.38" class="fish-eye-spark"/>
+                    <circle cx="-1" cy="0" r="1.7" class="fish6-spot"/>
+                    <circle cx="5" cy="-5" r="1.5" class="fish6-spot"/>
+                    <circle cx="7" cy="4" r="1.4" class="fish6-spot"/>
+                    <path d="M -4 6 Q 3 8 11 4" class="fish-pattern fish-pattern-violet"/>
                   </g>
                 </g>
 
-                <!-- Crab -->
-                <g class="creature crab">
+                <!-- Fish 6 -->
+                <g class="creature fish-6">
                   <g class="creature-inner">
-                    <g class="crab-legs">
-                      <path d="M -8 3 Q -13 6 -13 12" class="crab-leg"/>
-                      <path d="M -4 7 Q -6 12 -7 17" class="crab-leg"/>
-                      <path d="M 4 7 Q 6 12 7 17" class="crab-leg"/>
-                      <path d="M 8 3 Q 13 6 13 12" class="crab-leg"/>
-                    </g>
-                    <g class="crab-claws">
-                      <path d="M -8 -3 Q -16 -6 -15 0 Q -13 1 -10 -1" class="crab-claw"/>
-                      <path d="M 8 -3 Q 16 -6 15 0 Q 13 1 10 -1" class="crab-claw"/>
-                    </g>
-                    <ellipse cx="0" cy="0" rx="9" ry="7" class="crab-body"/>
-                    <circle cx="-3" cy="-5" r="1.6" class="crab-eye"/>
-                    <circle cx="3" cy="-5" r="1.6" class="crab-eye"/>
+                    <path d="M -15 -5 Q -21 -9 -24 0 Q -21 9 -15 5 Z" class="fish7-tail"/>
+                    <path d="M -15 0 Q -9 -10 0 -11 Q 13 -10 18 0 Q 13 10 0 11 Q -9 10 -15 0 Z" class="fish7-body"/>
+                    <path d="M -1 -9 Q 6 -14 10 -8" class="fish7-fin"/>
+                    <path d="M -7 -3 Q 1 -9 10 -6" class="fish-shine fish-shine-sky"/>
+                    <path d="M -6 -5 Q -8 0 -6 5" class="fish-gill fish-gill-sky"/>
+                    <path d="M -6 0 L 8 0" class="fish7-stripe"/>
+                    <path d="M -4 4 L 7 4" class="fish7-stripe fish7-stripe-soft"/>
+                    <circle cx="9" cy="-2" r="2.05" class="fish7-eye"/>
+                    <circle cx="9.8" cy="-2" r="0.94" class="fish-pupil"/>
+                    <circle cx="10.5" cy="-2.6" r="0.35" class="fish-eye-spark"/>
                   </g>
                 </g>
               </svg>

@@ -85,9 +85,113 @@
     const bubblesContainer = scene.querySelector('.bubbles-container');
     if (!bubblesContainer) return;
 
+    const creatures = Array.from(scene.querySelectorAll('.creature'));
+    if (creatures.length === 0) return;
+
     // Check if reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
+
+    const creatureConfigs = {
+      'fish-1': {
+        baseX: 50,
+        baseY: 86,
+        rangeX: 64,
+        rangeY: 18,
+        scale: 1.02,
+        speedX: 0.34,
+        speedY: 0.51,
+        drift: 18,
+        tilt: 7,
+        flip: true,
+      },
+      'fish-2': {
+        baseX: 146,
+        baseY: 46,
+        rangeX: 34,
+        rangeY: 16,
+        scale: 0.92,
+        speedX: 0.58,
+        speedY: 0.72,
+        drift: 12,
+        tilt: 9,
+        flip: true,
+      },
+      'fish-3': {
+        baseX: 90,
+        baseY: 120,
+        rangeX: 36,
+        rangeY: 22,
+        scale: 0.9,
+        speedX: 0.31,
+        speedY: 0.46,
+        drift: 14,
+        tilt: 8,
+        flip: true,
+      },
+      'fish-4': {
+        baseX: 154,
+        baseY: 92,
+        rangeX: 26,
+        rangeY: 18,
+        scale: 0.82,
+        speedX: 0.39,
+        speedY: 0.57,
+        drift: 10,
+        tilt: 7,
+        flip: true,
+      },
+      'fish-5': {
+        baseX: 146,
+        baseY: 156,
+        rangeX: 20,
+        rangeY: 12,
+        scale: 0.88,
+        speedX: 0.21,
+        speedY: 0.3,
+        drift: 6,
+        tilt: 6,
+        flip: true,
+      },
+      'fish-6': {
+        baseX: 68,
+        baseY: 172,
+        rangeX: 42,
+        rangeY: 9,
+        scale: 0.86,
+        speedX: 0.42,
+        speedY: 0.26,
+        drift: 8,
+        tilt: 7,
+        flip: true,
+      }
+    };
+
+    const creatureStates = creatures.map((creature, index) => {
+      const key = Object.keys(creatureConfigs).find(className => creature.classList.contains(className));
+      const config = creatureConfigs[key];
+      if (!config) return null;
+
+      const state = {
+        el: creature,
+        ...config,
+        phaseX: Math.random() * Math.PI * 2 + index * 0.6,
+        phaseY: Math.random() * Math.PI * 2 + index * 0.9,
+        phaseTilt: Math.random() * Math.PI * 2 + index * 0.45,
+        phaseDrift: Math.random() * Math.PI * 2 + index * 0.3,
+        currentX: config.baseX,
+        currentY: config.baseY,
+      };
+
+      creature.style.setProperty('--creature-scale', state.scale);
+      creature.style.setProperty('--creature-alpha', (0.84 + Math.random() * 0.14).toFixed(2));
+      creature.style.setProperty('--creature-blur', `${(Math.random() * 0.5).toFixed(2)}px`);
+
+      return state;
+    }).filter(Boolean);
+
+    let animationFrameId = null;
+    const startTime = performance.now();
 
     // Generate a single bubble with randomized size, drift, speed and origin
     function createBubble(originX, sizeMin, sizeMax) {
@@ -116,15 +220,48 @@
       }, (parseFloat(duration) + parseFloat(delay)) * 1000 + 100);
     }
 
-    // Occasionally spawn a small cluster of bubbles together (like a creature exhaling)
-    function spawnBurst() {
-      const originX = Math.random() * 160 + 20;
+    function spawnBurst(originX) {
+      const x = typeof originX === 'number' ? originX : Math.random() * 160 + 20;
       const count = Math.floor(Math.random() * 2) + 2; // 2-3 bubbles
       for (let i = 0; i < count; i++) {
         setTimeout(() => {
-          createBubble(originX + (Math.random() * 10 - 5), 1, 2.5);
+          createBubble(x + (Math.random() * 10 - 5), 1, 2.5);
         }, i * 120);
       }
+    }
+
+    function animateCreatures(now) {
+      if (!document.contains(scene)) return;
+
+      const t = (now - startTime) / 1000;
+
+      creatureStates.forEach((state) => {
+        const orbitX =
+          Math.sin(t * state.speedX + state.phaseX) * state.rangeX +
+          Math.sin(t * state.speedX * 0.53 + state.phaseDrift) * state.drift;
+        const orbitY =
+          Math.cos(t * state.speedY + state.phaseY) * state.rangeY +
+          Math.sin(t * state.speedY * 0.67 + state.phaseDrift) * (state.rangeY * 0.3);
+
+        const x = state.baseX + orbitX;
+        const y = state.baseY + orbitY;
+        const dx =
+          Math.cos(t * state.speedX + state.phaseX) * state.rangeX * state.speedX +
+          Math.cos(t * state.speedX * 0.53 + state.phaseDrift) * state.drift * state.speedX * 0.53;
+        const angle =
+          Math.sin(t * (state.speedY + 0.13) + state.phaseTilt) * state.tilt +
+          Math.cos(t * state.speedX * 0.7 + state.phaseDrift) * (state.tilt * 0.35);
+
+        const direction = state.flip ? (dx >= 0 ? 1 : -1) : 1;
+        const scaleX = direction * state.scale;
+        const scaleY = state.scale;
+
+        state.currentX = x;
+        state.currentY = y;
+        state.el.style.transform = `translate(${x}px, ${y}px) scale(${scaleX}, ${scaleY}) rotate(${angle}deg)`;
+      });
+
+      animationFrameId = window.requestAnimationFrame(animateCreatures);
     }
 
     // Seed a few bubbles immediately so the scene feels alive on load
@@ -132,18 +269,25 @@
       setTimeout(() => createBubble(undefined, 1.5, 4), i * 300);
     }
 
-    // Steady single bubbles every ~650ms, with occasional bursts
+    animationFrameId = window.requestAnimationFrame(animateCreatures);
+
+    // Steady single bubbles with occasional creature-origin bursts
     const bubbleInterval = setInterval(() => {
       if (!document.contains(scene)) {
+        if (animationFrameId) {
+          window.cancelAnimationFrame(animationFrameId);
+        }
         clearInterval(bubbleInterval);
         return;
       }
-      if (Math.random() < 0.22) {
-        spawnBurst();
+
+      if (Math.random() < 0.28 && creatureStates.length > 0) {
+        const source = creatureStates[Math.floor(Math.random() * creatureStates.length)];
+        spawnBurst(source.currentX + (Math.random() * 8 - 4));
       } else {
         createBubble(undefined, 1.5, 4.5);
       }
-    }, 650);
+    }, 720);
   }
 
   // =====================================
