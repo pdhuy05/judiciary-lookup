@@ -31,10 +31,25 @@
     return str;
   }
 
+  function escapeRegExp(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
   function highlightMatch(text, query) {
-    if (!query) return text;
-    const regex = new RegExp(`(${query.split(' ').join('|')})`, 'gi');
-    return text.replace(regex, '<mark>$1</mark>');
+    if (text == null) return '';
+    const safeText = String(text);
+    if (!query) return safeText;
+
+    const terms = query
+      .split(' ')
+      .map(term => term.trim())
+      .filter(Boolean)
+      .map(escapeRegExp);
+
+    if (terms.length === 0) return safeText;
+
+    const regex = new RegExp(`(${terms.join('|')})`, 'gi');
+    return safeText.replace(regex, '<mark>$1</mark>');
   }
 
   // =====================================
@@ -49,9 +64,14 @@
   }
 
   function renderStats() {
-    dom.totalStaff.textContent = staffData.length;
+    if (dom.totalStaff) {
+      dom.totalStaff.textContent = staffData.length;
+    }
+
     const depts = new Set(staffData.map(s => s.department).filter(Boolean));
-    dom.deptCount.textContent = depts.size;
+    if (dom.deptCount) {
+      dom.deptCount.textContent = depts.size;
+    }
   }
 
   // =====================================
