@@ -19,8 +19,6 @@ const STATIC_ASSETS = [
   './assets/icons/icon-512.png',
 ];
 
-// Các tài nguyên "mã nguồn" (dễ thay đổi khi sửa bug) dùng network-first
-// để người dùng luôn thấy bản mới nhất, tránh bị kẹt ở UI/JS cũ trong cache.
 const NETWORK_FIRST_PATTERNS = [/\/$/, /index\.html$/, /\/css\/style\.css$/, /\/js\/script\.js$/];
 
 function isNetworkFirstAsset(pathname) {
@@ -77,13 +75,11 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // HTML/CSS/JS chính: network-first để tránh kẹt ở bản code cũ sau khi sửa bug.
   if (isNetworkFirstAsset(url.pathname)) {
     event.respondWith(networkFirst(event.request, STATIC_CACHE));
     return;
   }
 
-  // Tài sản tĩnh khác (icon, manifest...): cache-first.
   event.respondWith(cacheFirst(event.request));
 });
 

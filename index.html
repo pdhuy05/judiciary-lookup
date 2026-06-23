@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Hệ thống tra cứu danh bạ nhân sự" />
-  <title>Danh bạ Nhân sự</title>
+  <title>Danh Bạ Nhân Sự</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -12,8 +12,9 @@
     <!-- Header -->
     <header class="header">
       <div class="header-container">
+        <img src="img/logo.png" alt="Logo Tòa án nhân dân" class="header-logo" />
         <div class="header-content">
-          <h1 class="header-title">Danh bạ Nhân sự</h1>
+          <h1 class="header-title">Danh Bạ Nhân Sự</h1>
           <p class="header-subtitle">Tra cứu thông tin nhân sự</p>
         </div>
         <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode">
@@ -66,9 +67,97 @@
             <div class="stat-value" id="totalStaff">0</div>
             <div class="stat-name">Tổng nhân sự</div>
           </div>
-          <div class="stat-item">
-            <div class="stat-value" id="deptCount">0</div>
-            <div class="stat-name">Bộ phận</div>
+          <div class="stat-item stat-item-animated">
+            <div class="aquatic-scene" id="aquaticScene">
+              <svg class="aquatic-canvas" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="fishGradA" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#38bdf8"/>
+                    <stop offset="100%" stop-color="#0369a1"/>
+                  </linearGradient>
+                  <linearGradient id="fishGradB" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#34d399"/>
+                    <stop offset="100%" stop-color="#047857"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- Bubble animations container -->
+                <g class="bubbles-container"></g>
+
+                <!-- Fish 1 -->
+                <g class="creature fish-1">
+                  <g class="creature-inner">
+                    <path d="M -20 -6 Q -26 -10 -28 0 Q -26 10 -20 6 Z" class="fish-tail"/>
+                    <path d="M -20 0 Q -14 -11 0 -10 Q 14 -9 18 0 Q 14 9 0 10 Q -14 11 -20 0 Z" class="fish-body"/>
+                    <path d="M -6 -8 Q 0 -13 6 -9" class="fish-fin"/>
+                    <circle cx="9" cy="-2" r="2.2" class="fish-eye"/>
+                  </g>
+                </g>
+
+                <!-- Fish 2 -->
+                <g class="creature fish-2">
+                  <g class="creature-inner">
+                    <path d="M -18 -5 Q -23 -9 -25 0 Q -23 9 -18 5 Z" class="fish3-tail"/>
+                    <path d="M -18 0 Q -12 -10 2 -9 Q 13 -8 16 0 Q 13 8 2 9 Q -12 10 -18 0 Z" class="fish3-body"/>
+                    <circle cx="8" cy="-2" r="2" class="fish3-eye"/>
+                  </g>
+                </g>
+
+                <!-- Octopus -->
+                <g class="creature octopus">
+                  <g class="creature-inner">
+                    <g class="octopus-tentacles">
+                      <path d="M -7 4 Q -11 14 -8 24" class="octopus-tentacle"/>
+                      <path d="M -3 7 Q -4 17 -2 26" class="octopus-tentacle"/>
+                      <path d="M 3 7 Q 4 17 2 26" class="octopus-tentacle"/>
+                      <path d="M 7 4 Q 11 14 8 24" class="octopus-tentacle"/>
+                    </g>
+                    <circle cx="0" cy="-2" r="11" class="octopus-head"/>
+                    <circle cx="-4" cy="-4" r="1.6" class="octopus-eye"/>
+                    <circle cx="4" cy="-4" r="1.6" class="octopus-eye"/>
+                  </g>
+                </g>
+
+                <!-- Jellyfish -->
+                <g class="creature jellyfish">
+                  <g class="creature-inner">
+                    <path d="M -9 -2 Q -9 -12 0 -12 Q 9 -12 9 -2 Q 5 2 0 0 Q -5 2 -9 -2 Z" class="jellyfish-head"/>
+                    <g class="jellyfish-tentacles">
+                      <path d="M -5 0 Q -9 8 -6 18" class="jellyfish-tentacle"/>
+                      <path d="M 0 1 Q -1 10 1 20" class="jellyfish-tentacle"/>
+                      <path d="M 5 0 Q 9 8 6 18" class="jellyfish-tentacle"/>
+                    </g>
+                  </g>
+                </g>
+
+                <!-- Starfish -->
+                <g class="creature starfish">
+                  <g class="creature-inner">
+                    <path d="M 0 -9 L 4 -3 L 10 -2 L 5 3 L 7 10 L 0 6 L -7 10 L -5 3 L -10 -2 L -4 -3 Z" class="starfish-arms"/>
+                    <circle cx="0" cy="0" r="3" class="starfish-body"/>
+                  </g>
+                </g>
+
+                <!-- Crab -->
+                <g class="creature crab">
+                  <g class="creature-inner">
+                    <g class="crab-legs">
+                      <path d="M -8 3 Q -13 6 -13 12" class="crab-leg"/>
+                      <path d="M -4 7 Q -6 12 -7 17" class="crab-leg"/>
+                      <path d="M 4 7 Q 6 12 7 17" class="crab-leg"/>
+                      <path d="M 8 3 Q 13 6 13 12" class="crab-leg"/>
+                    </g>
+                    <g class="crab-claws">
+                      <path d="M -8 -3 Q -16 -6 -15 0 Q -13 1 -10 -1" class="crab-claw"/>
+                      <path d="M 8 -3 Q 16 -6 15 0 Q 13 1 10 -1" class="crab-claw"/>
+                    </g>
+                    <ellipse cx="0" cy="0" rx="9" ry="7" class="crab-body"/>
+                    <circle cx="-3" cy="-5" r="1.6" class="crab-eye"/>
+                    <circle cx="3" cy="-5" r="1.6" class="crab-eye"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </section>

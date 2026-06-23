@@ -55,6 +55,78 @@
   }
 
   // =====================================
+  // AQUATIC SCENE BUBBLES
+  // =====================================
+
+  function initAquaticScene() {
+    const scene = document.getElementById('aquaticScene');
+    if (!scene) return;
+
+    const bubblesContainer = scene.querySelector('.bubbles-container');
+    if (!bubblesContainer) return;
+
+    // Check if reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    // Generate a single bubble with randomized size, drift, speed and origin
+    function createBubble(originX, sizeMin, sizeMax) {
+      const bubble = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      bubble.setAttribute('class', 'bubble bubble-rise');
+
+      const radius = Math.random() * (sizeMax - sizeMin) + sizeMin;
+      const x = originX !== undefined ? originX : Math.random() * 180 + 10;
+      const y = 195;
+      const drift = (Math.random() * 16 - 8).toFixed(1); // -8px to 8px horizontal sway
+      const duration = (Math.random() * 1.8 + 2.6).toFixed(2); // 2.6s - 4.4s
+      const delay = (Math.random() * 0.3).toFixed(2);
+
+      bubble.setAttribute('cx', x);
+      bubble.setAttribute('cy', y);
+      bubble.setAttribute('r', radius.toFixed(1));
+      bubble.style.setProperty('--drift', `${drift}px`);
+      bubble.style.animationDuration = `${duration}s`;
+      bubble.style.animationDelay = `${delay}s`;
+
+      bubblesContainer.appendChild(bubble);
+
+      // Remove after animation completes
+      setTimeout(() => {
+        bubble.remove();
+      }, (parseFloat(duration) + parseFloat(delay)) * 1000 + 100);
+    }
+
+    // Occasionally spawn a small cluster of bubbles together (like a creature exhaling)
+    function spawnBurst() {
+      const originX = Math.random() * 160 + 20;
+      const count = Math.floor(Math.random() * 2) + 2; // 2-3 bubbles
+      for (let i = 0; i < count; i++) {
+        setTimeout(() => {
+          createBubble(originX + (Math.random() * 10 - 5), 1, 2.5);
+        }, i * 120);
+      }
+    }
+
+    // Seed a few bubbles immediately so the scene feels alive on load
+    for (let i = 0; i < 3; i++) {
+      setTimeout(() => createBubble(undefined, 1.5, 4), i * 300);
+    }
+
+    // Steady single bubbles every ~650ms, with occasional bursts
+    const bubbleInterval = setInterval(() => {
+      if (!document.contains(scene)) {
+        clearInterval(bubbleInterval);
+        return;
+      }
+      if (Math.random() < 0.22) {
+        spawnBurst();
+      } else {
+        createBubble(undefined, 1.5, 4.5);
+      }
+    }, 650);
+  }
+
+  // =====================================
   // RENDER RESULTS
   // =====================================
 
@@ -167,7 +239,6 @@
     dom.searchInput.focus();
   });
 
-  // Theme toggle
   dom.themeToggle.addEventListener('click', () => {
     const html = document.documentElement;
     const isDark = html.getAttribute('data-theme') === 'dark';
@@ -175,7 +246,6 @@
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
   });
 
-  // Scroll to top
   window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
       dom.scrollTopBtn.classList.add('visible');
@@ -203,6 +273,8 @@
       copyrightYear.textContent = new Date().getFullYear();
     }
 
+    initAquaticScene();
+
     try {
       showState('loading');
       const res = await fetch('data/staffs.json');
@@ -220,8 +292,7 @@
       showState('empty');
     }
   }
-
-  // Start app when DOM is ready
+  
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
