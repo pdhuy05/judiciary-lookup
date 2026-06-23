@@ -3,515 +3,355 @@
     "id": 1,
     "name": "Phan Sỹ Hùng",
     "role": "Thẩm phán",
-    "department": "",
     "room": "403",
     "clerks": [
-      {
-        "name": "Đỗ Minh Phước",
-        "room": "203 - 206"
-      }
+      { "name": "Đỗ Minh Phước", "room": "203-206" }
     ]
   },
   {
     "id": 2,
     "name": "Nguyễn Đức Tĩnh",
     "role": "Thẩm phán",
-    "department": "",
     "room": "403",
     "clerks": [
-      {
-        "name": "Thanh",
-        "room": "203 - 206"
-      }
+      { "name": "Thanh", "room": "203-206" }
     ]
   },
   {
     "id": 3,
     "name": "Trần Minh Anh",
     "role": "Thẩm phán",
-    "department": "",
     "room": "403",
     "clerks": [
-      {
-        "name": "Đinh Thị Thanh Bình",
-        "room": "203 - 206"
-      }
+      { "name": "Đinh Thị Thanh Bình", "room": "203-206" }
     ]
   },
   {
     "id": 4,
     "name": "Hữu",
     "role": "Thẩm phán",
-    "department": "",
     "room": "403",
-    "clerks": [
-      {
-        "name": "",
-        "room": ""
-      }
-    ]
+    "clerks": []
   },
   {
     "id": 5,
     "name": "Huỳnh Ngọc Tuân",
     "role": "Thẩm phán",
-    "department": "",
     "room": "403",
     "clerks": [
-      {
-        "name": "Cao Thị Mỹ Trà",
-        "room": "209"
-      }
+      { "name": "Cao Thị Mỹ Trà", "room": "209" }
     ]
   },
   {
     "id": 6,
     "name": "Lê Phan Duy Thịnh",
     "role": "Thẩm phán",
-    "department": "",
     "room": "403",
     "clerks": [
-      {
-        "name": "Chị Trúc",
-        "room": "203 - 206"
-      }
+      { "name": "Chị Trúc", "room": "203-206" }
     ]
   },
   {
     "id": 7,
     "name": "Đỗ Thế Đông",
     "role": "Thẩm phán",
-    "department": "",
     "room": "403",
     "clerks": [
-      {
-        "name": "Phạm Thị Phương Thảo",
-        "room": "209"
-      }
+      { "name": "Phạm Thị Phương Thảo", "room": "209" }
     ]
   },
   {
     "id": 8,
     "name": "Lê Thị Phương",
     "role": "Thẩm phán",
-    "department": "",
     "room": "304",
     "clerks": [
-      {
-        "name": "Lê Thị Ngọc Trân",
-        "room": "209"
-      },
-      {
-        "name": "Phạm Thị Anh Mỹ",
-        "room": "209"
-      }
+      { "name": "Lê Thị Ngọc Trân", "room": "209" },
+      { "name": "Phạm Thị Anh Mỹ", "room": "209" }
     ]
   },
   {
     "id": 9,
     "name": "M.Phượng",
     "role": "Thẩm phán",
-    "department": "",
     "room": "304",
     "clerks": [
-      {
-        "name": "Hùng",
-        "room": "209"
-      }
+      { "name": "Trần Mạnh Hùng", "room": "Tầng Trệt" }
     ]
   },
   {
     "id": 10,
     "name": "Phạm Thị Tâm",
     "role": "Thẩm phán",
-    "department": "",
     "room": "304",
     "clerks": [
-      {
-        "name": "Phạm Ngọc Thy Thơ",
-        "room": "203 - 206"
-      }
+      { "name": "Phạm Ngọc Thy Thơ", "room": "203-206" }
     ]
   },
   {
     "id": 11,
     "name": "Trương Phú Oanh",
     "role": "Thẩm phán",
-    "department": "",
-    "room": "306 - 308",
+    "room": "306-308",
     "clerks": [
-      {
-        "name": "Phùng Nguyễn Hồng Phương",
-        "room": "209"
-      }
+      { "name": "Phùng Nguyễn Hồng Phương", "room": "209" }
     ]
   },
   {
     "id": 12,
     "name": "Võ Thị Kim Thương",
     "role": "Thẩm phán",
-    "department": "",
-    "room": "306 - 308",
+    "room": "306-308",
     "clerks": [
-      {
-        "name": "Lê Thị Hương",
-        "room": "203 - 206"
-      }
+      { "name": "Lê Thị Hương", "room": "203-206" }
     ]
   },
   {
     "id": 13,
     "name": "Vũ Thị Hường",
     "role": "Thẩm phán",
-    "department": "",
-    "room": "306 - 308",
+    "room": "306-308",
     "clerks": [
-      {
-        "name": "Phạm Ngọc Thy Thơ",
-        "room": "203 - 206"
-      }
+      { "name": "Phạm Ngọc Thy Thơ", "room": "203-206" }
     ]
   },
   {
     "id": 14,
     "name": "Chị Lan",
     "role": "Thẩm phán",
-    "department": "",
-    "room": "306 - 308",
+    "room": "306-308",
     "clerks": [
-      {
-        "name": "Lê Thị Ngọc Trân",
-        "room": "209"
-      }
+      { "name": "Lê Thị Ngọc Trân", "room": "209" }
     ]
   },
   {
     "id": 15,
     "name": "Chị Quế Hương",
     "role": "Thẩm phán",
-    "department": "",
-    "room": "306 - 308",
+    "room": "306-308",
     "clerks": [
-      {
-        "name": "Chị Huệ",
-        "room": "203 -206"
-      }
+      { "name": "Chị Huệ", "room": "203-206" }
     ]
   },
   {
     "id": 16,
     "name": "Nguyễn Hồng Hạnh",
     "role": "Thẩm phán",
-    "department": "",
-    "room": "306 - 308",
+    "room": "306-308",
     "clerks": [
-      {
-        "name": "Phạm Thị Phương Thảo",
-        "room": "209"
-      }
+      { "name": "Phạm Thị Phương Thảo", "room": "209" },
+      { "name": "Mai Yến Nhi", "room": "Tầng Trệt" }
     ]
   },
   {
     "id": 17,
     "name": "Chị Diệu Linh",
     "role": "Thẩm phán",
-    "department": "",
-    "room": "306 - 308",
+    "room": "306-308",
     "clerks": [
-      {
-        "name": "Chị Trúc",
-        "room": "203 - 206"
-      }
+      { "name": "Chị Trúc", "room": "203-206" }
     ]
   },
   {
     "id": 18,
     "name": "Chị Loan",
     "role": "Thẩm phán",
-    "department": "",
-    "room": "306 - 308",
+    "room": "306-308",
     "clerks": [
-      {
-        "name": "Hùng",
-        "room": "209"
-      }
+      { "name": "Trần Mạnh Hùng", "room": "Tầng Trệt" }
     ]
   },
   {
     "id": 19,
     "name": "Chị Tuyết",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Hoàng",
-        "room": "209"
-      }
+      { "name": "Hoàng", "room": "209" }
     ]
   },
   {
     "id": 20,
     "name": "Đinh Kim Huệ",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Nguyễn Sơn Hà",
-        "room": "209"
-      }
+      { "name": "Nguyễn Sơn Hà", "room": "209" }
     ]
   },
   {
     "id": 21,
     "name": "Tôn Trung Tuấn",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Đỗ Minh Phước",
-        "room": "203 - 206"
-      }
+      { "name": "Đỗ Minh Phước", "room": "203-206" }
     ]
   },
   {
     "id": 22,
     "name": "Nguyễn Thị Mỹ Duyên",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Trương Nguyễn Thu Trang",
-        "room": "203 - 206"
-      }
+      { "name": "Trương Nguyễn Thu Trang", "room": "203-206" }
     ]
   },
   {
     "id": 23,
     "name": "Hoàng Thị Ánh",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Nguyễn Thị Thanh Kim Tuyền",
-        "room": "203 - 206"
-      }
+      { "name": "Nguyễn Thị Thanh Kim Tuyền", "room": "203-206" }
     ]
   },
   {
     "id": 24,
     "name": "Bùi Thị Mai",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Đinh Thị Thanh Bình",
-        "room": "203 - 206"
-      }
+      { "name": "Đinh Thị Thanh Bình", "room": "203-206" }
     ]
   },
   {
     "id": 25,
     "name": "Mai Phương",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Trương Nguyễn Thu Trang",
-        "room": "203 - 206"
-      }
+      { "name": "Trương Nguyễn Thu Trang", "room": "203-206" }
     ]
   },
   {
     "id": 26,
     "name": "Thu",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Thanh",
-        "room": "203 - 206"
-      }
+      { "name": "Thanh", "room": "203-206" }
     ]
   },
   {
     "id": 27,
     "name": "Nguyễn Thúy Minh",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Lê Thị Hương",
-        "room": "203 - 206"
-      }
+      { "name": "Lê Thị Hương", "room": "203-206" }
     ]
   },
   {
     "id": 28,
     "name": "Hương",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Hương",
-        "room": "203 - 206"
-      }
+      { "name": "Lê Thị Hương", "room": "203-206" }
     ]
   },
   {
     "id": 29,
     "name": "Nguyễn Thị Như Hoa",
     "role": "Thẩm phán",
-    "department": "",
     "room": "302",
     "clerks": [
-      {
-        "name": "Đoàn Như Quỳnh",
-        "room": ""
-      },
-       {
-        "name": "Huệ",
-        "room": ""
-      }
+      { "name": "Đoàn Như Quỳnh", "room": "" },
+      { "name": "Huệ", "room": "" }
     ]
   },
   {
     "id": 30,
     "name": "Trần Phạm Thị Trúc Đào",
     "role": "Thẩm phán",
-    "department": "",
     "room": "302",
     "clerks": [
-      {
-        "name": "Lê Thị Ngọc Trân",
-        "room": "209"
-      }
+      { "name": "Lê Thị Ngọc Trân", "room": "209" }
     ]
   },
   {
     "id": 31,
     "name": "Trần Thị Xuân Quỳnh",
     "role": "Thẩm phán",
-    "department": "",
     "room": "302",
     "clerks": [
-      {
-        "name": "Nguyễn Sơn Hà",
-        "room": "209"
-      }
+      { "name": "Nguyễn Sơn Hà", "room": "209" }
     ]
   },
   {
     "id": 32,
     "name": "Lê Thị Mỹ Nhung",
     "role": "Thẩm phán",
-    "department": "",
-    "room": "",
+    "room": "411",
     "clerks": [
-      {
-        "name": "Cao Thị Mỹ Trà",
-        "room": "209"
-      }
+      { "name": "Cao Thị Mỹ Trà", "room": "209" }
     ]
   },
   {
     "id": 33,
     "name": "Mai Xuân Thành",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Bùi Ngọc Khánh Hoàng",
-        "room": "209"
-      }
+      { "name": "Bùi Ngọc Khánh Hoàng", "room": "209" }
     ]
   },
   {
     "id": 34,
     "name": "Phạm Trí Tuấn",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Nguyễn Thị Thanh Kim Tuyền",
-        "room": "203 - 206"
-      }
+      { "name": "Nguyễn Thị Thanh Kim Tuyền", "room": "203-206" }
     ]
   },
   {
     "id": 35,
     "name": "Cành",
     "role": "Thẩm phán",
-    "department": "",
     "room": "",
     "clerks": [
-      {
-        "name": "Anh Quỳnh",
-        "room": "203 - 206"
-      }
+      { "name": "Thái Lê Quỳnh", "room": "Tầng Trệt" }
     ]
   },
   {
     "id": 36,
     "name": "Chị Mai",
     "role": "Hòa giải viên",
-    "department": "",
     "room": "Phòng Hòa giải",
-    "clerks": [
-      {
-        "name": "",
-        "room": ""
-      }
-    ]
+    "clerks": []
   },
   {
     "id": 37,
     "name": "Chị Thúy Minh",
     "role": "Hòa giải viên",
-    "department": "",
     "room": "Phòng Hòa giải",
-    "clerks": [
-      {
-        "name": "",
-        "room": ""
-      }
-    ]
+    "clerks": []
   },
   {
     "id": 38,
     "name": "Chị Nhung",
     "role": "Hòa giải viên",
-    "department": "",
     "room": "Phòng Hòa giải",
-    "clerks": [
-      {
-        "name": "",
-        "room": ""
-      }
-    ]
+    "clerks": []
   },
   {
     "id": 39,
     "name": "Trần Thanh Bình",
     "role": "Thẩm phán",
-    "department": "",
     "room": "403",
     "clerks": [
-      {
-        "name": "Lê Ý Nhi",
-        "room": ""
-      }
+      { "name": "Lê Ý Nhi", "room": "" }
     ]
-   }
+  },
+  {
+    "id": 40,
+    "name": "Nguyễn Thị Phượng",
+    "role": "Thẩm phán",
+    "room": "",
+    "clerks": [
+      { "name": "Phạm Thị Nguyên", "room": "" }
+    ]
+  }
 ]
